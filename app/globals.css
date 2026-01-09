@@ -144,6 +144,15 @@
     background: linear-gradient(135deg, oklch(0.15 0.02 250) 0%, oklch(0.12 0.03 220) 50%, oklch(0.15 0.02 280) 100%);
     background-attachment: fixed;
   }
+
+  @keyframes flash-red {
+    0%, 100% { color: var(--destructive); }
+    50% { color: transparent; }
+  }
+
+  .flash-red {
+    animation: flash-red 2s linear infinite;
+  }
 }
 
 /* Added liquid glass effect utilities */
