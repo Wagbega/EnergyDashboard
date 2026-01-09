@@ -126,11 +126,16 @@
 
 @layer base {
   @keyframes flash-red {
-    0%, 100% { color: var(--color-destructive); }
-    50% { color: transparent; }
+    0%, 100% { 
+      color: var(--color-destructive);
+      opacity: 1;
+    }
+    50% { 
+      opacity: 0.3;
+    }
   }
 
   .flash-red {
-    animation: flash-red 2s linear infinite;
+    animation: flash-red 1s ease-in-out infinite !important;
   }
 }
