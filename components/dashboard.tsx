@@ -27,7 +27,7 @@ export default function Dashboard() {
       setIsOnline(true)
       setError(null)
     } catch (err) {
-      console.error("[v0] Error fetching ThingSpeak data:", err)
+      console.error("[v0] Error fetching data:", err)
       setError(err instanceof Error ? err.message : "Failed to fetch data")
       setIsOnline(false)
     } finally {
@@ -71,7 +71,7 @@ export default function Dashboard() {
           <div className="flex h-16 w-16 mx-auto items-center justify-center rounded-2xl glass-strong glow-primary animate-pulse">
             <Zap className="h-8 w-8 text-primary" />
           </div>
-          <p className="text-muted-foreground font-medium">Loading data from ThingSpeak...</p>
+          <p className="text-muted-foreground font-medium">Loading data from Server...</p>
         </div>
       </div>
     )
